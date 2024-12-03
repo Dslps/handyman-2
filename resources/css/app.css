@@ -1,0 +1,405 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --color: white;
+    --default-color: #e3dad3;
+    --comment-bg: #f2f2f2;
+    --hover: #ac5b22;
+    --accent-color: #d06f2a;
+    --base-color: #222;
+    --support-color: #333;
+    /* ---------------- */
+    --title-start: 70px;
+    --title: 40px;
+    --context: 22px;
+    --base-text: 18px;
+    --comment: 16px;
+    --font-primary: "Odibee Sans", sans-serif;
+} 
+html {
+    scroll-behavior: smooth;
+} 
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Rajdhani", sans-serif;
+    color: var(--support-color);
+}
+.font-2 {
+    font-family: "Odibee Sans", sans-serif;
+  }
+a:hover{
+    color: var(--accent-color);
+    transition: 0.3s;
+}
+
+
+/* ------------------------------------------Общий класс для верхней части---------------------------------- */
+.top-contact-box {
+    @apply w-full bg-[var(--base-color)] text-[var(--default-color)] lg:h-[30px] h-max 3xl:flex items-center xl:px-[20px] md:px-[20px] px-[10px] lg:text-[16px]  text-[16px];
+}
+
+/* Контейнер для контента */
+.top-contact-container {
+    @apply block lg:flex justify-between max-w-[1600px] w-full mx-auto;
+}
+
+/* Стили для текста с иконкой слева */
+.top-contact-left {
+    @apply flex items-center justify-center;
+}
+
+/* Стили для правого блока с иконками */
+.top-contact-right {
+    @apply lg:flex block justify-center;
+}
+
+/* Общие стили для текста с иконкой */
+.top-contact-item {
+    @apply flex items-center justify-center;
+}
+
+.top-contact-icon {
+    @apply mr-[10px] text-[14px];
+}
+/* ----------------------------------------------Общий контейнер навигации------------------------------------------------------------- */
+/* Общие стили */
+/* Общие стили */
+.navigation-box {
+    @apply w-full bg-[var(--support-color)] 3xl:h-[100px] xl:h-[75px] h-[75px] flex;
+}
+
+/* Внутренний контейнер */
+.navigation-container {
+    @apply flex max-w-[1600px] 3xl:px-[0px] xl:px-[20px] px-[20px] w-full mx-auto;
+}
+
+/* Логотип */
+.logo-container {
+    @apply flex items-start;
+}
+
+.logo-image {
+    @apply 3xl:w-[200px] xl:w-[150px] w-[150px] pt-[0.66em] absolute;
+}
+
+/* Основное меню */
+.nav-menu {
+    @apply w-full flex justify-end items-center;
+}
+
+.nav-list {
+    @apply flex gap-6 justify-end text-[var(--default-color)] ;
+}
+
+/* Пункты меню */
+.nav-item {
+    @apply font-2 relative items-center font-medium 3xl:text-[18px]  xl:text-[16px] ;
+}
+
+.nav-link {
+    @apply lg:hover:text-[var(--accent-color)] transition duration-300 lg:h-[100px] items-center px-5 lg:px-0 font-bold lg:font-medium;
+}
+
+/* Выпадающее меню */
+.dropdown-menu {
+    @apply lg:absolute left-1/2 lg:-translate-x-1/2 lg:hidden lg:group-hover:block bg-[var(--default-color)] text-black  lg:w-[300px] rounded shadow-lg font-bold lg:font-medium;
+}
+
+/* Пункты выпадающего меню */
+.dropdown-item {
+    @apply relative;
+}
+
+.dropdown-link {
+    @apply block px-5 py-4 w-full lg:hover:text-[var(--accent-color)] transition duration-300;
+}
+
+.dropdown-divider {
+    @apply absolute left-4 right-4 bottom-0 border-b-[1px] border-[var(--support-color)];
+}
+
+
+/* Навигация в режиме мобильного меню */
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+/* ----------------------------------------------FOOTER-------------------------------------------------------------------------------- */
+/* ----------------------------------------------FOOTER-------------------------------------------------------------------------------- */
+/* ----------------------------------------------FOOTER-------------------------------------------------------------------------------- */
+
+.footer {
+    @apply bg-[var(--support-color)] w-full;
+}
+
+.footer-container {
+    @apply max-w-[1600px] text-[var(--color)] mx-auto flex py-[50px];
+}
+
+.footer-column {
+    @apply flex-1 basis-1/4 p-4 lg:w-full lg:basis-auto;
+}
+
+.footer-title {
+    @apply border-b-4 border-[var(--accent-color)] inline-block my-5 font-2
+}
+.footer-title{
+    font-family: var(--font-primary);
+    font-size: var(--title)
+}
+.footer-text {
+    @apply text-[var(--base-text)];
+}
+
+.footer-button {
+    @apply px-8 py-2 border-2 border-[var(--color)] hover:border-[var(--accent-color)] 
+           hover:text-[var(--base-color)] hover:bg-[var(--accent-color)] transition duration-300 ease-in-out;
+}
+
+.footer-list {
+    @apply text-[var(--base-text)];
+}
+
+.location-icon {
+    @apply mr-5 text-[var(--accent-color)];
+}
+
+.footer-bottom {
+    @apply max-w-[1600px] m-auto text-[var(--color)] pb-10;
+}
+
+.footer-social {
+    @apply flex items-center pb-3 border-b-2 border-[var(--accent-color)];
+}
+
+.footer-social-label {
+    @apply mr-5;
+}
+
+.footer-social-icons {
+    @apply flex gap-5;
+}
+
+.footer-links {
+    @apply mt-3 space-y-3;
+}
+/* ======================================================================================================== */
+/* ======================================================================================================== */
+/* ======================================================================================================== */
+
+
+
+/* -------------------------------------------HOME PAGE------------------------------------------------ */
+.bg-image{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: max-content;
+}
+/* Общие стили для секций */
+.bg-image {
+    @apply w-full px-10 bg-cover bg-center;
+  }
+  
+  .section-container {
+    @apply max-w-[1400px] m-auto flex flex-col lg:flex-row pt-[100px] relative;
+  }
+  
+  /* Стили для текста */
+  .text-container {
+    @apply flex-1;
+  }
+  
+  .heading-primary {
+    @apply text-[var(--color)] font-semibold my-3;
+    font-size: var(--base-text);
+  }
+  
+  .heading-secondary {
+    @apply font-2 text-[var(--accent-color)] leading-[70px];
+    font-size: var(--title-start);
+  }
+  
+  .list-container {
+    @apply text-[var(--color)] font-semibold space-y-2;
+    font-size: var(--base-text);
+  }
+  
+  .list-item {
+    @apply flex items-center gap-2;
+  }
+  
+  .list-icon {
+    @apply text-[var(--accent-color)];
+  }
+  
+  /* Стили для кнопок */
+  .button-primary {
+    @apply w-[200px] bg-[var(--accent-color)] py-3 text-[var(--color)] font-semibold;
+  }
+  
+  .button-secondary {
+    @apply w-[200px] border-2 py-3 text-[var(--color)] font-semibold hover:text-[var(--base-color)] hover:bg-[var(--default-color)] transition duration-300;
+  }
+  
+  .button-request {
+    @apply  py-3 bg-[var(--accent-color)] text-[var(--color)] font-semibold mt-5 w-[240px];
+  }
+  
+  /* Стили для изображений */
+  .image-row {
+    @apply flex flex-wrap relative  lg:mt-[-10vw] m-[50px] justify-center lg:gap-5 gap-0;
+  }
+  
+  .image-item {
+    @apply lg:w-[18vw] sm:w-[200px] w-[150px] max-w-[300px];
+  }
+  
+  /* Стили для иконок */
+  .icon-list {
+    @apply flex  mt-0 lg:mx-auto mx-[50px] flex-wrap justify-center gap-10 max-w-[1200px];
+  }
+  
+  .icon-card {
+    @apply flex flex-col justify-center text-center text-[--default-color] font-semibold lg:w-[200px] lg:h-[200px] w-[100px] h-[100px] hover:text-[var(--accent-color)] transition duration-300;
+    font-size: var(--base-text);
+  }
+  
+  .icon-image {
+    @apply lg:w-[100px] w-[70px];
+  }
+  
+
+
+  /* ------------------------FINANCE------------------------------------------------- */
+  .section-container-1 {
+    @apply w-full bg-[var(--color)] px-5;
+}
+
+.section-inner {
+    @apply max-w-[1400px] m-auto flex flex-col-reverse lg:flex-row justify-between py-20 border-t-[1px] border-b-[1px] border-[var(--support-color)] my-20 px-5 lg:px-20;
+}
+
+.section-text {
+    @apply m-auto lg:m-0;
+}
+
+.financing-highlight {
+    @apply text-[var(--accent-color)] font-semibold;
+    font-size: var(--context);
+}
+
+.financing-title {
+    @apply font-semibold text-[var(--support-color)];
+    font-size: var(--title);
+}
+
+.financing-description {
+    @apply max-w-[700px];
+    font-size: var(--base-text);
+}
+
+.action-container {
+    @apply mx-auto;
+}
+
+.line-image {
+    @apply mt-[20px];
+}
+
+.section-image {
+    @apply m-auto lg:m-0;
+}
+
+.house-image {
+    @apply w-[400px];
+}
+
+
+
+
+/* Адаптивный стиль для 1024px */
+@media (max-width: 1024px) {
+    .burger-menu {
+        display: block;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: whitesmoke;
+        color: var(--base-color);
+        font-weight: 700;
+        position: absolute;
+        top: 30px;
+        margin-top: 215px;
+        left: 0;
+        width: 100%;
+    }
+    .nav-list.active {
+        display: flex;
+    }
+    .nav-item {
+        border-bottom: 1px solid #333;
+    }
+    .dropdown-menu {
+        background-color: var(--default-color);
+    }
+    .dropdown-link {
+        color: var(--base-color);
+    }
+    /* Скрытое состояние меню */
+    .dropdown-menu {
+        height: 0; 
+        opacity: 0;
+        overflow: hidden; 
+        transform: translateY(-10px); 
+        visibility: hidden;
+        transition: height 0.3s ease, opacity 0.3s ease, transform 0.3s ease; 
+        background: var(--default-color);
+        list-style: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 0 15px; 
+        padding-bottom: 10px;
+      }
+      
+      /* Видимое состояние меню */
+      .nav-item.active .dropdown-menu {
+        height: auto; 
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        padding: 10px; 
+        margin-top: 20px;
+      }
+      
+  
+    
+    .nav-item.active .dropdown-menu {
+        display: block;
+    }
+    
+    .toggle-dropdown {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-item.active .toggle-dropdown {
+        transform: rotate(180deg); 
+    }
+}
+@media (max-width: 465px){
+    .heading-secondary{
+        font-size: 50px;
+    }
+    .form{
+        width: 100%;
+    }
+}
